@@ -11,6 +11,7 @@ st.set_page_config(
 st.title("TRA CỨU VĂN BẰNG, CHỨNG CHỈ")
 st.caption("Bản thử nghiệm - Dữ liệu giả lập")
 
+
 data = pd.DataFrame([
     {
         "Họ và tên": "Nguyễn Văn A",
@@ -26,8 +27,19 @@ data = pd.DataFrame([
         "Họ và tên": "Lê Văn C",
         "Ngày sinh": "20/09/2004",
         "Số hiệu bằng": "DEMO003"
+    },
+    {
+        "Họ và tên": "Phạm Thị D",
+        "Ngày sinh": "12/12/2005",
+        "Số hiệu bằng": "DEMO004"
+    },
+    {
+        "Họ và tên": "Hoàng Văn E",
+        "Ngày sinh": "05/03/2006",
+        "Số hiệu bằng": "DEMO005"
     }
 ])
+
 
 name = st.text_input("Họ và tên")
 dob = st.text_input("Ngày sinh")
