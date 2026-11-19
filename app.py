@@ -14,11 +14,9 @@ def normalize(s):
     return ' '.join(''.join(c for c in s if unicodedata.category(c) != 'Mn').replace('đ', 'd').split())
 
 
-@st.cache_data
-def load_data():
-    path = Path(__file__).parent / 'public_demo.json'
-    if not path.exists():
-        return []
+@st.cache_data(show_spinner=False)
+def load_data(file_path: str, modified_ns: int):
+    path = Path(file_path)
     with path.open('r', encoding='utf-8') as f:
         payload = json.load(f)
     if payload.get('demo_only') is not True or not isinstance(payload.get('records'), list):
@@ -27,13 +25,18 @@ def load_data():
         raise ValueError('Từ chối dữ liệu không phải DEMO.')
     return payload['records']
 
+data_path = Path(__file__).resolve().parent / 'public_demo.json'
+if not data_path.is_file():
+    st.error('Không tìm thấy file public_demo.json trong thư mục chứa app.py trên máy chủ Streamlit.')
+    st.info('Hãy kiểm tra GitHub: app.py và public_demo.json phải cùng thư mục, đúng nhánh đang triển khai. Sau khi Commit, khởi động lại ứng dụng.')
+    st.stop()
 try:
-    rows = load_data()
-except (ValueError, OSError, json.JSONDecodeError) as e:
+    rows = load_data(str(data_path), data_path.stat().st_mtime_ns)
+except (ValueError, OSError, json.JSONDecodeError, TypeError, AttributeError) as e:
     st.error(f'Không đọc được dữ liệu công khai: {e}')
     st.stop()
 if not rows:
-    st.info('Chưa có phiên dữ liệu DEMO được công bố.')
+    st.warning('File public_demo.json đã tồn tại nhưng không có bản ghi nào trong records.')
 else:
     with st.form('lookup'):
         number = st.text_input('Số hiệu bằng')
