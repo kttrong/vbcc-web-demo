@@ -1,0 +1,714 @@
+{
+  "demo_only": true,
+  "publication_id": 1,
+  "approved_at": "2026-11-19T08:47:56+00:00",
+  "fields": [
+    "Số hiệu bằng",
+    "Họ, chữ đệm và tên",
+    "Ngày, tháng, năm sinh",
+    "Tên văn bằng",
+    "Tình trạng văn bằng"
+  ],
+  "records": [
+    {
+      "Số hiệu bằng": "DEMO00100",
+      "Họ, chữ đệm và tên": "Đỗ Văn An",
+      "Ngày, tháng, năm sinh": "17/05/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00099",
+      "Họ, chữ đệm và tên": "Bùi Thanh Mai",
+      "Ngày, tháng, năm sinh": "16/04/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00098",
+      "Họ, chữ đệm và tên": "Đặng Thanh Hà",
+      "Ngày, tháng, năm sinh": "15/03/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00097",
+      "Họ, chữ đệm và tên": "Võ Thanh Bình",
+      "Ngày, tháng, năm sinh": "14/02/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00096",
+      "Họ, chữ đệm và tên": "Phan Thanh Nam",
+      "Ngày, tháng, năm sinh": "13/01/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00095",
+      "Họ, chữ đệm và tên": "Hoàng Thanh Hùng",
+      "Ngày, tháng, năm sinh": "12/12/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00094",
+      "Họ, chữ đệm và tên": "Phạm Thanh Chi",
+      "Ngày, tháng, năm sinh": "11/11/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00093",
+      "Họ, chữ đệm và tên": "Lê Thanh Phúc",
+      "Ngày, tháng, năm sinh": "10/10/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00092",
+      "Họ, chữ đệm và tên": "Trần Thanh Lan",
+      "Ngày, tháng, năm sinh": "09/09/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00091",
+      "Họ, chữ đệm và tên": "Nguyễn Thanh Dũng",
+      "Ngày, tháng, năm sinh": "08/08/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00090",
+      "Họ, chữ đệm và tên": "Đỗ Thanh An",
+      "Ngày, tháng, năm sinh": "07/07/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00089",
+      "Họ, chữ đệm và tên": "Bùi Ngọc Mai",
+      "Ngày, tháng, năm sinh": "06/06/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00088",
+      "Họ, chữ đệm và tên": "Đặng Ngọc Hà",
+      "Ngày, tháng, năm sinh": "05/05/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00087",
+      "Họ, chữ đệm và tên": "Võ Ngọc Bình",
+      "Ngày, tháng, năm sinh": "04/04/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00086",
+      "Họ, chữ đệm và tên": "Phan Ngọc Nam",
+      "Ngày, tháng, năm sinh": "03/03/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00085",
+      "Họ, chữ đệm và tên": "Hoàng Ngọc Hùng",
+      "Ngày, tháng, năm sinh": "02/02/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00084",
+      "Họ, chữ đệm và tên": "Phạm Ngọc Chi",
+      "Ngày, tháng, năm sinh": "01/01/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00083",
+      "Họ, chữ đệm và tên": "Lê Ngọc Phúc",
+      "Ngày, tháng, năm sinh": "28/12/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00082",
+      "Họ, chữ đệm và tên": "Trần Ngọc Lan",
+      "Ngày, tháng, năm sinh": "27/11/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00081",
+      "Họ, chữ đệm và tên": "Nguyễn Ngọc Dũng",
+      "Ngày, tháng, năm sinh": "26/10/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00080",
+      "Họ, chữ đệm và tên": "Đỗ Ngọc An",
+      "Ngày, tháng, năm sinh": "25/09/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00079",
+      "Họ, chữ đệm và tên": "Bùi Minh Mai",
+      "Ngày, tháng, năm sinh": "24/08/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00078",
+      "Họ, chữ đệm và tên": "Đặng Minh Hà",
+      "Ngày, tháng, năm sinh": "23/07/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00077",
+      "Họ, chữ đệm và tên": "Võ Minh Bình",
+      "Ngày, tháng, năm sinh": "22/06/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00076",
+      "Họ, chữ đệm và tên": "Phan Minh Nam",
+      "Ngày, tháng, năm sinh": "21/05/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00075",
+      "Họ, chữ đệm và tên": "Hoàng Minh Hùng",
+      "Ngày, tháng, năm sinh": "20/04/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00074",
+      "Họ, chữ đệm và tên": "Phạm Minh Chi",
+      "Ngày, tháng, năm sinh": "19/03/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00073",
+      "Họ, chữ đệm và tên": "Lê Minh Phúc",
+      "Ngày, tháng, năm sinh": "18/02/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00072",
+      "Họ, chữ đệm và tên": "Trần Minh Lan",
+      "Ngày, tháng, năm sinh": "17/01/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00071",
+      "Họ, chữ đệm và tên": "Nguyễn Minh Dũng",
+      "Ngày, tháng, năm sinh": "16/12/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00070",
+      "Họ, chữ đệm và tên": "Đỗ Minh An",
+      "Ngày, tháng, năm sinh": "15/11/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00069",
+      "Họ, chữ đệm và tên": "Bùi Thị Mai",
+      "Ngày, tháng, năm sinh": "14/10/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00068",
+      "Họ, chữ đệm và tên": "Đặng Thị Hà",
+      "Ngày, tháng, năm sinh": "13/09/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00067",
+      "Họ, chữ đệm và tên": "Võ Thị Bình",
+      "Ngày, tháng, năm sinh": "12/08/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00066",
+      "Họ, chữ đệm và tên": "Phan Thị Nam",
+      "Ngày, tháng, năm sinh": "11/07/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00065",
+      "Họ, chữ đệm và tên": "Hoàng Thị Hùng",
+      "Ngày, tháng, năm sinh": "10/06/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00064",
+      "Họ, chữ đệm và tên": "Phạm Thị Chi",
+      "Ngày, tháng, năm sinh": "09/05/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00063",
+      "Họ, chữ đệm và tên": "Lê Thị Phúc",
+      "Ngày, tháng, năm sinh": "08/04/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00062",
+      "Họ, chữ đệm và tên": "Trần Thị Lan",
+      "Ngày, tháng, năm sinh": "07/03/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00061",
+      "Họ, chữ đệm và tên": "Nguyễn Thị Dũng",
+      "Ngày, tháng, năm sinh": "06/02/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00060",
+      "Họ, chữ đệm và tên": "Đỗ Thị An",
+      "Ngày, tháng, năm sinh": "05/01/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00059",
+      "Họ, chữ đệm và tên": "Bùi Văn Mai",
+      "Ngày, tháng, năm sinh": "04/12/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00058",
+      "Họ, chữ đệm và tên": "Đặng Văn Hà",
+      "Ngày, tháng, năm sinh": "03/11/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00057",
+      "Họ, chữ đệm và tên": "Võ Văn Bình",
+      "Ngày, tháng, năm sinh": "02/10/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00056",
+      "Họ, chữ đệm và tên": "Phan Văn Nam",
+      "Ngày, tháng, năm sinh": "01/09/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00055",
+      "Họ, chữ đệm và tên": "Hoàng Văn Hùng",
+      "Ngày, tháng, năm sinh": "28/08/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00054",
+      "Họ, chữ đệm và tên": "Phạm Văn Chi",
+      "Ngày, tháng, năm sinh": "27/07/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00053",
+      "Họ, chữ đệm và tên": "Lê Văn Phúc",
+      "Ngày, tháng, năm sinh": "26/06/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00052",
+      "Họ, chữ đệm và tên": "Trần Văn Lan",
+      "Ngày, tháng, năm sinh": "25/05/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00051",
+      "Họ, chữ đệm và tên": "Nguyễn Văn Dũng",
+      "Ngày, tháng, năm sinh": "24/04/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00050",
+      "Họ, chữ đệm và tên": "Đỗ Văn An",
+      "Ngày, tháng, năm sinh": "23/03/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00049",
+      "Họ, chữ đệm và tên": "Bùi Thanh Mai",
+      "Ngày, tháng, năm sinh": "22/02/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00048",
+      "Họ, chữ đệm và tên": "Đặng Thanh Hà",
+      "Ngày, tháng, năm sinh": "21/01/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00047",
+      "Họ, chữ đệm và tên": "Võ Thanh Bình",
+      "Ngày, tháng, năm sinh": "20/12/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00046",
+      "Họ, chữ đệm và tên": "Phan Thanh Nam",
+      "Ngày, tháng, năm sinh": "19/11/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00045",
+      "Họ, chữ đệm và tên": "Hoàng Thanh Hùng",
+      "Ngày, tháng, năm sinh": "18/10/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00044",
+      "Họ, chữ đệm và tên": "Phạm Thanh Chi",
+      "Ngày, tháng, năm sinh": "17/09/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00043",
+      "Họ, chữ đệm và tên": "Lê Thanh Phúc",
+      "Ngày, tháng, năm sinh": "16/08/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00042",
+      "Họ, chữ đệm và tên": "Trần Thanh Lan",
+      "Ngày, tháng, năm sinh": "15/07/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00041",
+      "Họ, chữ đệm và tên": "Nguyễn Thanh Dũng",
+      "Ngày, tháng, năm sinh": "14/06/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00040",
+      "Họ, chữ đệm và tên": "Đỗ Thanh An",
+      "Ngày, tháng, năm sinh": "13/05/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00039",
+      "Họ, chữ đệm và tên": "Bùi Ngọc Mai",
+      "Ngày, tháng, năm sinh": "12/04/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00038",
+      "Họ, chữ đệm và tên": "Đặng Ngọc Hà",
+      "Ngày, tháng, năm sinh": "11/03/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00037",
+      "Họ, chữ đệm và tên": "Võ Ngọc Bình",
+      "Ngày, tháng, năm sinh": "10/02/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00036",
+      "Họ, chữ đệm và tên": "Phan Ngọc Nam",
+      "Ngày, tháng, năm sinh": "09/01/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00035",
+      "Họ, chữ đệm và tên": "Hoàng Ngọc Hùng",
+      "Ngày, tháng, năm sinh": "08/12/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00034",
+      "Họ, chữ đệm và tên": "Phạm Ngọc Chi",
+      "Ngày, tháng, năm sinh": "07/11/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00033",
+      "Họ, chữ đệm và tên": "Lê Ngọc Phúc",
+      "Ngày, tháng, năm sinh": "06/10/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00032",
+      "Họ, chữ đệm và tên": "Trần Ngọc Lan",
+      "Ngày, tháng, năm sinh": "05/09/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00031",
+      "Họ, chữ đệm và tên": "Nguyễn Ngọc Dũng",
+      "Ngày, tháng, năm sinh": "04/08/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00030",
+      "Họ, chữ đệm và tên": "Đỗ Ngọc An",
+      "Ngày, tháng, năm sinh": "03/07/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00029",
+      "Họ, chữ đệm và tên": "Bùi Minh Mai",
+      "Ngày, tháng, năm sinh": "02/06/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00028",
+      "Họ, chữ đệm và tên": "Đặng Minh Hà",
+      "Ngày, tháng, năm sinh": "01/05/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00027",
+      "Họ, chữ đệm và tên": "Võ Minh Bình",
+      "Ngày, tháng, năm sinh": "28/04/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00026",
+      "Họ, chữ đệm và tên": "Phan Minh Nam",
+      "Ngày, tháng, năm sinh": "27/03/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00025",
+      "Họ, chữ đệm và tên": "Hoàng Minh Hùng",
+      "Ngày, tháng, năm sinh": "26/02/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00024",
+      "Họ, chữ đệm và tên": "Phạm Minh Chi",
+      "Ngày, tháng, năm sinh": "25/01/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00023",
+      "Họ, chữ đệm và tên": "Lê Minh Phúc",
+      "Ngày, tháng, năm sinh": "24/12/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00022",
+      "Họ, chữ đệm và tên": "Trần Minh Lan",
+      "Ngày, tháng, năm sinh": "23/11/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00021",
+      "Họ, chữ đệm và tên": "Nguyễn Minh Dũng",
+      "Ngày, tháng, năm sinh": "22/10/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00020",
+      "Họ, chữ đệm và tên": "Đỗ Minh An",
+      "Ngày, tháng, năm sinh": "21/09/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00019",
+      "Họ, chữ đệm và tên": "Bùi Thị Mai",
+      "Ngày, tháng, năm sinh": "20/08/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00018",
+      "Họ, chữ đệm và tên": "Đặng Thị Hà",
+      "Ngày, tháng, năm sinh": "19/07/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00017",
+      "Họ, chữ đệm và tên": "Võ Thị Bình",
+      "Ngày, tháng, năm sinh": "18/06/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00016",
+      "Họ, chữ đệm và tên": "Phan Thị Nam",
+      "Ngày, tháng, năm sinh": "17/05/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00015",
+      "Họ, chữ đệm và tên": "Hoàng Thị Hùng",
+      "Ngày, tháng, năm sinh": "16/04/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00014",
+      "Họ, chữ đệm và tên": "Phạm Thị Chi",
+      "Ngày, tháng, năm sinh": "15/03/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00013",
+      "Họ, chữ đệm và tên": "Lê Thị Phúc",
+      "Ngày, tháng, năm sinh": "14/02/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00012",
+      "Họ, chữ đệm và tên": "Trần Thị Lan",
+      "Ngày, tháng, năm sinh": "13/01/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00011",
+      "Họ, chữ đệm và tên": "Nguyễn Thị Dũng",
+      "Ngày, tháng, năm sinh": "12/12/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00010",
+      "Họ, chữ đệm và tên": "Đỗ Thị An",
+      "Ngày, tháng, năm sinh": "11/11/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00009",
+      "Họ, chữ đệm và tên": "Bùi Văn Mai",
+      "Ngày, tháng, năm sinh": "10/10/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00008",
+      "Họ, chữ đệm và tên": "Đặng Văn Hà",
+      "Ngày, tháng, năm sinh": "09/09/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00007",
+      "Họ, chữ đệm và tên": "Võ Văn Bình",
+      "Ngày, tháng, năm sinh": "08/08/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00006",
+      "Họ, chữ đệm và tên": "Phan Văn Nam",
+      "Ngày, tháng, năm sinh": "07/07/2004",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00005",
+      "Họ, chữ đệm và tên": "Hoàng Văn Hùng",
+      "Ngày, tháng, năm sinh": "06/06/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00004",
+      "Họ, chữ đệm và tên": "Phạm Văn Chi",
+      "Ngày, tháng, năm sinh": "05/05/2007",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00003",
+      "Họ, chữ đệm và tên": "Lê Văn Phúc",
+      "Ngày, tháng, năm sinh": "04/04/2006",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00002",
+      "Họ, chữ đệm và tên": "Trần Văn Lan",
+      "Ngày, tháng, năm sinh": "03/03/2005",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    },
+    {
+      "Số hiệu bằng": "DEMO00001",
+      "Họ, chữ đệm và tên": "Nguyễn Văn Dũng",
+      "Ngày, tháng, năm sinh": "02/02/2004",
+      "Tên văn bằng": "Sửa",
+      "Tình trạng văn bằng": "DỮ LIỆU GIẢ LẬP"
+    }
+  ]
+}
