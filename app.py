@@ -1,61 +1,112 @@
-"""Tra cứu VBCC 11 cột - CHỈ DEMO. Không đưa dữ liệu thật vào GitHub."""
+"""Tra cứu VBCC 11 cột từ Supabase, CHỈ DỮ LIỆU DEMO.
+
+Không đưa dữ liệu VBCC thật hoặc khóa Supabase lên GitHub.
+"""
 import json
-import unicodedata
-from pathlib import Path
+import re
+import time
 from datetime import datetime
+from urllib.error import HTTPError, URLError
+from urllib.parse import urlencode, urlparse
+from urllib.request import Request, urlopen
+
 import streamlit as st
 
-st.set_page_config(page_title='Tra cứu VBCC - DEMO 11 cột', layout='centered', page_icon='🎓')
-st.title('TRA CỨU VĂN BẰNG, CHỨNG CHỈ')
-st.warning('BẢN THỬ NGHIỆM – 100 hồ sơ giả lập, không có giá trị xác minh văn bằng thật.')
+st.set_page_config(page_title="Tra cứu VBCC - DEMO 11 cột", layout="centered", page_icon="🎓")
+st.title("TRA CỨU VĂN BẰNG, CHỨNG CHỈ")
+st.warning("BẢN THỬ NGHIỆM – chỉ tra cứu hồ sơ DEMO, không có giá trị xác minh văn bằng thật.")
 
-FIELDS = ['STT','Số hiệu bằng','Số vào sổ gốc cấp văn bằng','Họ, chữ đệm và tên','Ngày, tháng, năm sinh','Giới tính','Dân tộc','Nơi sinh','Tên trường đã học','Niên khóa','Hội đồng thi']
-DISPLAY = ['Số hiệu bằng','Số vào sổ gốc cấp văn bằng','Họ, chữ đệm và tên','Ngày, tháng, năm sinh','Tên trường đã học','Niên khóa','Hội đồng thi']
+DISPLAY = {
+    "so_hieu_bang": "Số hiệu bằng",
+    "so_vao_so_goc": "Số vào sổ gốc cấp văn bằng",
+    "ho_ten": "Họ, chữ đệm và tên",
+    "ngay_sinh": "Ngày, tháng, năm sinh",
+    "ten_truong": "Tên trường đã học",
+    "nien_khoa": "Niên khóa",
+    "hoi_dong_thi": "Hội đồng thi",
+}
 
-def norm(s):
-    return ' '.join(unicodedata.normalize('NFC', str(s or '')).casefold().split())
 
-def dob(s):
-    s = str(s or '').strip()
-    for fmt in ('%d/%m/%Y','%d-%m-%Y','%Y-%m-%d'):
-        try: return datetime.strptime(s, fmt).strftime('%d/%m/%Y')
-        except ValueError: pass
-    return ''
+def valid_date(value: str) -> bool:
+    if not re.fullmatch(r"\d{2}/\d{2}/\d{4}", value):
+        return False
+    try:
+        datetime.strptime(value, "%d/%m/%Y")
+        return True
+    except ValueError:
+        return False
 
-@st.cache_data
 
-def load_demo():
-    path = Path(__file__).with_name('public_demo_11cot.json')
-    obj = json.loads(path.read_text(encoding='utf-8'))
-    if obj.get('demo_only') is not True or obj.get('schema') != 'VBCC_11_COT' or not isinstance(obj.get('records'),list):
-        raise ValueError('Từ chối dữ liệu không đúng cấu trúc DEMO 11 cột.')
-    records = obj['records']
-    if len(records) != 100 or any(not isinstance(r,dict) or not all(k in r for k in FIELDS) or not str(r['Số hiệu bằng']).startswith('DEMO') or not str(r['Số vào sổ gốc cấp văn bằng']).startswith('SO-DEMO') for r in records):
-        raise ValueError('Chỉ chấp nhận đúng bộ 100 hồ sơ DEMO giả lập.')
-    return records
+def query_vbcc(number: str, name: str, birthday: str):
+    """Chỉ lấy tối đa 2 kết quả khớp đủ 3 trường, không tải cả bảng."""
+    try:
+        base = str(st.secrets["SUPABASE_URL"]).strip().rstrip("/")
+        secret = str(st.secrets["SUPABASE_SECRET_KEY"]).strip()
+    except (KeyError, FileNotFoundError) as exc:
+        raise RuntimeError("Chưa cấu hình Supabase Secrets.") from exc
 
-try:
-    records = load_demo()
-except (OSError, ValueError, json.JSONDecodeError) as exc:
-    st.error(f'Không đọc được dữ liệu DEMO: {exc}')
-    st.stop()
+    parsed = urlparse(base)
+    if parsed.scheme != "https" or not parsed.hostname or not parsed.hostname.endswith(".supabase.co") or parsed.path not in ("", "/"):
+        raise RuntimeError("SUPABASE_URL không hợp lệ; dùng Project URL, không kèm /rest/v1/.")
+    if not secret:
+        raise RuntimeError("Thiếu SUPABASE_SECRET_KEY.")
 
-with st.form('tra_cuu'):
-    number = st.text_input('Số hiệu bằng', placeholder='DEMO00001', max_chars=50)
-    name = st.text_input('Họ, chữ đệm và tên', placeholder='Nguyễn Văn Dũng', max_chars=150)
-    birthday = st.text_input('Ngày, tháng, năm sinh (dd/mm/yyyy)', placeholder='02/02/2004', max_chars=10)
-    submitted = st.form_submit_button('Tra cứu', type='primary')
+    params = urlencode({
+        "select": ",".join(DISPLAY.keys()),
+        "so_hieu_bang": "eq." + number,
+        "ho_ten": "eq." + name,
+        "ngay_sinh": "eq." + birthday,
+        "limit": "2",
+    })
+    req = Request(
+        f"{base}/rest/v1/vbcc?{params}",
+        headers={
+            "apikey": secret,
+            "Accept": "application/json",
+        },
+        method="GET",
+    )
+    try:
+        with urlopen(req, timeout=12) as response:
+            result = json.load(response)
+    except (HTTPError, URLError, TimeoutError, ValueError) as exc:
+        # Không hiển thị chi tiết lỗi máy chủ hoặc thông tin xác thực cho người dùng.
+        raise RuntimeError("Không kết nối được cơ sở dữ liệu. Vui lòng thử lại sau.") from exc
+    if not isinstance(result, list):
+        raise RuntimeError("Phản hồi cơ sở dữ liệu không hợp lệ.")
+    return result
+
+
+with st.form("tra_cuu"):
+    number = st.text_input("Số hiệu bằng", placeholder="DEMO00001", max_chars=50)
+    name = st.text_input("Họ, chữ đệm và tên", placeholder="Nguyễn Văn Dũng", max_chars=150)
+    birthday = st.text_input("Ngày, tháng, năm sinh (dd/mm/yyyy)", placeholder="02/02/2004", max_chars=10)
+    submitted = st.form_submit_button("Tra cứu", type="primary")
 
 if submitted:
-    if not number.strip() or not name.strip() or not birthday.strip():
-        st.error('Vui lòng nhập đầy đủ ba thông tin.')
-    elif not dob(birthday):
-        st.error('Ngày sinh không hợp lệ. Nhập theo định dạng dd/mm/yyyy.')
+    number, name, birthday = number.strip(), name.strip(), birthday.strip()
+    if not number or not name or not birthday:
+        st.error("Vui lòng nhập đầy đủ ba thông tin.")
+    elif not valid_date(birthday):
+        st.error("Ngày sinh không hợp lệ. Nhập đúng định dạng dd/mm/yyyy.")
+    elif not re.fullmatch(r"DEMO\d{5}", number):
+        st.info("Phiên bản thử nghiệm chỉ hỗ trợ số hiệu bằng DEMO.")
     else:
-        found = [r for r in records if norm(r['Số hiệu bằng']) == norm(number) and norm(r['Họ, chữ đệm và tên']) == norm(name) and dob(r['Ngày, tháng, năm sinh']) == dob(birthday)]
-        if len(found) != 1:
-            st.info('Không tìm thấy hồ sơ phù hợp.')
+        # Giảm gửi yêu cầu liên tiếp trong cùng phiên; KHÔNG thay thế rate limit ở phía máy chủ.
+        now = time.monotonic()
+        last = st.session_state.get("last_lookup_time", 0.0)
+        if now - last < 3:
+            st.warning("Vui lòng chờ vài giây trước khi tra cứu tiếp.")
         else:
-            st.success('Tìm thấy hồ sơ giả lập phù hợp (DEMO).')
-            for label in DISPLAY:
-                st.write(f'**{label}:** {found[0].get(label) or ""}')
+            st.session_state["last_lookup_time"] = now
+            try:
+                found = query_vbcc(number, name, birthday)
+            except RuntimeError as exc:
+                st.error(str(exc))
+            else:
+                if len(found) != 1 or found[0].get("so_hieu_bang") != number:
+                    st.info("Không tìm thấy hồ sơ phù hợp.")
+                else:
+                    st.success("Tìm thấy hồ sơ giả lập phù hợp (DEMO).")
+                    for field, label in DISPLAY.items():
+                        st.write(f"**{label}:** {found[0].get(field) or ''}")
