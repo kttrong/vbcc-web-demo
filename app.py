@@ -3,6 +3,7 @@
 Không đưa dữ liệu VBCC thật hoặc khóa Supabase lên GitHub.
 """
 import json
+import logging
 import re
 import time
 from datetime import datetime
@@ -69,9 +70,12 @@ def query_vbcc(number: str, name: str, birthday: str):
     try:
         with urlopen(req, timeout=12) as response:
             result = json.load(response)
-    except (HTTPError, URLError, TimeoutError, ValueError) as exc:
-        # Không hiển thị chi tiết lỗi máy chủ hoặc thông tin xác thực cho người dùng.
-        raise RuntimeError("Không kết nối được cơ sở dữ liệu. Vui lòng thử lại sau.") from exc
+    except HTTPError as exc:
+        logging.error("VBCC Supabase HTTP error: status=%s", exc.code)
+        raise RuntimeError("Không kết nối được cơ sở dữ liệu. Vui lòng thử lại sau.") from None
+    except (URLError, TimeoutError, ValueError) as exc:
+        logging.error("VBCC Supabase connection error: type=%s", type(exc).__name__)
+        raise RuntimeError("Không kết nối được cơ sở dữ liệu. Vui lòng thử lại sau.") from None
     if not isinstance(result, list):
         raise RuntimeError("Phản hồi cơ sở dữ liệu không hợp lệ.")
     return result
