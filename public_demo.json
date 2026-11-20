@@ -1,7 +1,7 @@
 {
   "demo_only": true,
-  "publication_id": 2,
-  "approved_at": "2026-11-19T09:11:42+00:00",
+  "publication_id": 3,
+  "approved_at": "2026-11-20T01:12:56+00:00",
   "fields": [
     "Số hiệu bằng",
     "Họ, chữ đệm và tên",
@@ -10,6 +10,13 @@
     "Tình trạng văn bằng"
   ],
   "records": [
+    {
+      "Số hiệu bằng": "DEMO00101",
+      "Họ, chữ đệm và tên": "Đỗ Văn An",
+      "Ngày, tháng, năm sinh": "17/05/2003",
+      "Tên văn bằng": "Bằng tốt nghiệp trung học phổ thông",
+      "Tình trạng văn bằng": ""
+    },
     {
       "Số hiệu bằng": "DEMO00100",
       "Họ, chữ đệm và tên": "Đỗ Văn An",
