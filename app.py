@@ -9,7 +9,7 @@ import re
 import time
 from datetime import datetime
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode, urlparse
+from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 
 import streamlit as st
@@ -43,7 +43,7 @@ def query_vbcc(number: str, name: str, birthday: str):
     """Đọc tối đa hai kết quả khớp cả ba trường; không tải toàn bảng."""
     try:
         base = str(st.secrets["SUPABASE_URL"]).strip().rstrip("/")
-        secret = str(st.secrets["SUPABASE_SECRET_KEY"]).strip()
+        secret = str(st.secrets["SUPABASE_PUBLISHABLE_KEY"]).strip()
     except (KeyError, FileNotFoundError) as exc:
         raise RuntimeError("Chưa cấu hình Supabase Secrets.") from exc
 
@@ -52,20 +52,15 @@ def query_vbcc(number: str, name: str, birthday: str):
             not parsed.hostname.endswith(".supabase.co") or
             parsed.path not in ("", "/") or parsed.query or parsed.fragment):
         raise RuntimeError("SUPABASE_URL không hợp lệ; dùng Project URL, không kèm /rest/v1/.")
-    if not secret:
-        raise RuntimeError("Thiếu SUPABASE_SECRET_KEY.")
+    if not secret.startswith("sb_publishable_"):
+        raise RuntimeError("Thiếu SUPABASE_PUBLISHABLE_KEY.")
 
-    params = urlencode({
-        "select": ",".join(DISPLAY.keys()),
-        "so_hieu_bang": "eq." + number,
-        "ho_ten": "eq." + name,
-        "ngay_sinh": "eq." + birthday,
-        "limit": "2",
-    })
+    payload = json.dumps({"p_number": number, "p_name": name, "p_birthday": birthday}).encode("utf-8")
     req = Request(
-        f"{base}/rest/v1/vbcc?{params}",
-        headers={"apikey": secret, "Accept": "application/json"},
-        method="GET",
+        f"{base}/rest/v1/rpc/vbcc_lookup_demo",
+        data=payload,
+        headers={"apikey": secret, "Accept": "application/json", "Content-Type": "application/json"},
+        method="POST",
     )
     try:
         with urlopen(req, timeout=12) as response:
