@@ -94,7 +94,7 @@ if submitted:
         st.error("Vui lòng nhập đầy đủ ba thông tin.")
     elif not valid_date(birthday):
         st.error("Ngày sinh không hợp lệ. Nhập đúng định dạng dd/mm/yyyy.")
-    elif not re.fullmatch(r"DEMO\d{5}", number):
+    elif not re.fullmatch(r"DEMO[0-9]{5,6}", number):
         st.info("Phiên bản thử nghiệm chỉ hỗ trợ số hiệu bằng DEMO.")
     else:
         # Chỉ hạn chế theo phiên Streamlit, có thể vượt qua bằng phiên mới.
