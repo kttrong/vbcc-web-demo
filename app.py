@@ -1,9 +1,12 @@
 """Tra cứu VBCC từ Supabase — chỉ hồ sơ DEMO.
 
 Không đưa khóa Supabase hoặc dữ liệu VBCC thật vào GitHub.
-Giới hạn theo phiên dưới đây chỉ hỗ trợ DEMO, không phải rate limit an toàn cấp máy chủ.
+DEMO: giới hạn phiên và RPC có chữ ký; chưa chống bot toàn diện.
 """
 import json
+import hashlib
+import hmac
+import secrets
 import logging
 import re
 import time
@@ -44,6 +47,7 @@ def query_vbcc(number: str, name: str, birthday: str):
     try:
         base = str(st.secrets["SUPABASE_URL"]).strip().rstrip("/")
         secret = str(st.secrets["SUPABASE_PUBLISHABLE_KEY"]).strip()
+        signing_key = str(st.secrets["VBCC_SIGNING_KEY"]).strip()
     except (KeyError, FileNotFoundError) as exc:
         raise RuntimeError("Chưa cấu hình Supabase Secrets.") from exc
 
@@ -55,9 +59,16 @@ def query_vbcc(number: str, name: str, birthday: str):
     if not secret.startswith("sb_publishable_"):
         raise RuntimeError("Thiếu SUPABASE_PUBLISHABLE_KEY.")
 
-    payload = json.dumps({"p_number": number, "p_name": name, "p_birthday": birthday}).encode("utf-8")
+    if not re.fullmatch(r"[0-9a-f]{64}", signing_key):
+        raise RuntimeError("VBCC_SIGNING_KEY không hợp lệ.")
+    ts = int(time.time())
+    nonce = secrets.token_hex(16)
+    msg = ":".join([str(ts), nonce] + [v.encode("utf-8").hex() for v in (number, name, birthday)])
+    sig = hmac.new(bytes.fromhex(signing_key), msg.encode("utf-8"), hashlib.sha256).hexdigest()
+    payload = json.dumps({"p_number": number, "p_name": name, "p_birthday": birthday,
+                          "p_ts": ts, "p_nonce": nonce, "p_sig": sig}).encode("utf-8")
     req = Request(
-        f"{base}/rest/v1/rpc/vbcc_lookup_demo",
+        f"{base}/rest/v1/rpc/vbcc_lookup_guarded_demo",
         data=payload,
         headers={"apikey": secret, "Accept": "application/json", "Content-Type": "application/json"},
         method="POST",
@@ -66,6 +77,8 @@ def query_vbcc(number: str, name: str, birthday: str):
         with urlopen(req, timeout=12) as response:
             result = json.load(response)
     except HTTPError as exc:
+        if exc.code == 429:
+            raise RuntimeError("Hệ thống đang bận. Vui lòng thử lại sau một phút.") from None
         logging.error("VBCC Supabase HTTP status=%s", exc.code)
         raise RuntimeError("Không kết nối được cơ sở dữ liệu. Vui lòng thử lại sau.") from None
     except (URLError, TimeoutError, ValueError) as exc:
@@ -92,13 +105,17 @@ if submitted:
     elif not re.fullmatch(r"DEMO[0-9]{5,6}", number):
         st.info("Phiên bản thử nghiệm chỉ hỗ trợ số hiệu bằng DEMO.")
     else:
-        # Chỉ hạn chế theo phiên Streamlit, có thể vượt qua bằng phiên mới.
+        # Giới hạn phiên bổ sung; RPC áp dụng giới hạn tổng.
         now = time.monotonic()
         last = st.session_state.get("last_lookup_time", 0.0)
-        if now - last < 3:
+        recent = [t for t in st.session_state.get("lookup_times", []) if now - t < 60]
+        if len(recent) >= 10:
+            st.warning("Tối đa 10 lượt/phút. Vui lòng thử lại sau.")
+        elif now - last < 3:
             st.warning("Vui lòng chờ vài giây trước khi tra cứu tiếp.")
         else:
             st.session_state["last_lookup_time"] = now
+            st.session_state["lookup_times"] = recent + [now]
             try:
                 found = query_vbcc(number, name, birthday)
             except RuntimeError as exc:
